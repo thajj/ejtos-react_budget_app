@@ -11,29 +11,43 @@ import RemainingBudget from './components/Remaining';
 const App = () => {
     return (
         <AppProvider>
-            <div className='container'>
-                <h1 className='mt-3'>Company's Budget Allocation</h1>
-                <div className='row mt-3'>
-                    <div className='col-sm'>
-                        <Budget />
-                    </div>
-                    <div className='col-sm'>
-                        <RemainingBudget />
-                    </div>
-                    <div className='col-sm'>
-                        <ExpenseTotal />
+            <nav className="p-3 bg-dark text-white shadow">
+                <div className="container d-flex flex-wrap">
+                    <h1 className=''>Company's Budget Allocation</h1>
+                </div>
+            </nav>
+            <header className="pt-3 bg-white border-bottom shadow-sm">
+
+                <div className="container text-center ">
+                    <div class="row">
+                        <div class="col">
+                            <Budget />
+                        </div>
+                        <div class="col">
+                            <RemainingBudget />
+                        </div>
+                        <div class="col">
+                            <ExpenseTotal />
+                        </div>
                     </div>
                 </div>
-                <h3 className='mt-3'>Allocation</h3>
-                <div className='row '>
-                    <div className='col-sm'>
-                        <ExpenseList />
+            </header>
+
+            <div className="container pb-3 pt-3">
+                <div className="row">
+                    <div className="col-8">
+                        <div className="card">
+                            <div className="card-header">Allocation</div>
+                            <div className="card-body">
+                                <ExpenseList />
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <h3 className='mt-3'>Change allocation</h3>
-                <div className='row mt-3'>
-                    <div className='col-sm'>
-                        <AllocationForm/>
+                    <div className="col-4">
+                        <div className="card">
+                            <div className="card-header">Change allocation</div>
+                            <AllocationForm />
+                        </div>
                     </div>
                 </div>
             </div>
